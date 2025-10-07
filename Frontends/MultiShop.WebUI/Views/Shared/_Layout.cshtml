@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MultiShop.WebUI</title>
+
+    <!-- Temel CSS dosyaları -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MultiShop.WebUI.styles.css" asp-append-version="true" />
+    <style>
+        /* =====================================
+           Tüm sarıları pembeye çevir (Bootstrap + Tema)
+           ===================================== */
+
+        /* 1️⃣ CSS değişkenleri (Bootstrap 5) */
+        :root {
+            --bs-warning: #F5A8B8 !important;
+            --bs-warning-rgb: 245, 168, 184 !important;
+        }
+
+        /* 2️⃣ Butonlar */
+        button.btn-warning,
+        .btn-warning,
+        button.btn-warning:focus,
+        .btn-warning:focus,
+        button.btn-warning:hover,
+        .btn-warning:hover,
+        button.btn-warning:active,
+        .btn-warning:active {
+            background-color: #F5A8B8 !important;
+            border-color: #F5A8B8 !important;
+            color: #fff !important;
+        }
+
+            button.btn-warning:hover,
+            .btn-warning:hover {
+                background-color: #e3909f !important;
+                border-color: #e3909f !important;
+            }
+
+        /* 3️⃣ Arka planlar */
+        .bg-warning,
+        .alert-warning,
+        .badge-warning {
+            background-color: #F5A8B8 !important;
+            color: #fff !important;
+            border-color: #F5A8B8 !important;
+        }
+
+        /* 4️⃣ Metin renkleri */
+        .text-warning,
+        a.text-warning,
+        a.text-warning:hover {
+            color: #F5A8B8 !important;
+        }
+
+        /* 5️⃣ Borderlar */
+        .border-warning {
+            border-color: #F5A8B8 !important;
+        }
+
+        /* 6️⃣ Form ve input focus */
+        .form-control:focus,
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #F5A8B8 !important;
+            box-shadow: 0 0 0 0.2rem rgba(245, 168, 184, 0.25) !important;
+        }
+
+        /* 7️⃣ Navbar, link ve hover renkleri */
+        .navbar .btn-warning,
+        .navbar .bg-warning,
+        .navbar .text-warning,
+        .navbar .alert-warning {
+            background-color: #F5A8B8 !important;
+            border-color: #F5A8B8 !important;
+            color: #fff !important;
+        }
+
+            .navbar .btn-warning:hover,
+            .navbar .bg-warning:hover,
+            .navbar .text-warning:hover,
+            .navbar .alert-warning:hover {
+                background-color: #e3909f !important;
+                border-color: #e3909f !important;
+                color: #fff !important;
+            }
+
+        /* 8️⃣ Badge hover ve aktif durum */
+        .badge-warning:hover,
+        .badge-warning:active {
+            background-color: #e3909f !important;
+            border-color: #e3909f !important;
+        }
+
+        /* 9️⃣ Her türlü override için !important ekli genel seçici */
+        * {
+            --bs-warning: #F5A8B8 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MultiShop.WebUI</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main role="main" class="pb-3 container">
+            @RenderBody()
+        </main>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2025 - MultiShop.WebUI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JS dosyaları -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

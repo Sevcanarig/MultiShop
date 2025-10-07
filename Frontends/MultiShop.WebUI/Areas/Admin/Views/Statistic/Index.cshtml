@@ -1,0 +1,207 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #D8B4F0;">
+                <!-- pastel lila -->
+                <div class="media-icon pull-left"><i class="fas fa-crown"></i> </div>
+                <div class="media-info">
+                    <h5>Toplam Marka</h5>
+                    <h3>@ViewBag.getBrandCount</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #93C5FD;">
+                <!-- pastel mavi -->
+                <div class="media-icon pull-left"><i class="fas fa-box-open"></i> </div>
+                <div class="media-info">
+                    <h5>Toplam Ürün</h5>
+                    <h3>@ViewBag.getProductCount</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #6EE7B7;">
+                <!-- pastel yeşil -->
+                <div class="media-icon pull-left"><i class="fas fa-tags"></i> </div>
+                <div class="media-info">
+                    <h5>Toplam Kategori</h5>
+                    <h3>@ViewBag.getCategoryCount</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #FBCFE8;">
+                <!-- pastel pembe -->
+                <div class="media-icon pull-left"><i class="fas fa-coins"></i> </div>
+                <div class="media-info">
+                    <h5>Ortalama Ürün Fiyatı</h5>
+                    <h3>254.38 ₺</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #D8B4F0;">
+                <div class="media-icon pull-left"><i class="fas fa-gem"></i> </div>
+                <div class="media-info">
+                    <h5>En Pahalı Ürün</h5>
+                    <h3>@ViewBag.getMaxPriceProductName</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #93C5FD;">
+                <div class="media-icon pull-left"><i class="fas fa-wallet"></i> </div>
+                <div class="media-info">
+                    <h5>En Ucuz Ürün</h5>
+                    <h3>@ViewBag.getMinPriceProductName</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #6EE7B7;">
+                <div class="media-icon pull-left"><i class="fas fa-users"></i> </div>
+                <div class="media-info">
+                    <h5>Toplam Kullanıcı</h5>
+                    <h3>@ViewBag.getUserCount</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #FBCFE8;">
+                <div class="media-icon pull-left"><i class="fas fa-comments"></i> </div>
+                <div class="media-info">
+                    <h5>Toplam Yorum</h5>
+                    <h3>@ViewBag.getTotalCommentCount</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #D8B4F0;">
+                <div class="media-icon pull-left"><i class="fas fa-check-circle"></i> </div>
+                <div class="media-info">
+                    <h5>Aktif Yorum</h5>
+                    <h3>@ViewBag.getActiveCommentCount</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #93C5FD;">
+                <div class="media-icon pull-left"><i class="fas fa-times-circle"></i> </div>
+                <div class="media-info">
+                    <h5>Pasif Yorum</h5>
+                    <h3>@ViewBag.getPassiveCommentCount</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #6EE7B7;">
+                <div class="media-icon pull-left"><i class="fas fa-ticket-alt"></i> </div>
+                <div class="media-info">
+                    <h5>İndirim Kuponu Sayısı</h5>
+                    <h3>@ViewBag.getDiscountCouponCount</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #FBCFE8;">
+                <div class="media-icon pull-left"><i class="fas fa-envelope"></i> </div>
+                <div class="media-info">
+                    <h5>Toplam Mesaj Sayısı</h5>
+                    <h3>@ViewBag.getMessageTotalCount</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #D8B4F0;">
+                <div class="media-icon pull-left"><i class="fas fa-star"></i> </div>
+                <div class="media-info">
+                    <h5>Ayın Müşterisi</h5>
+                    <h3>Asel Çaku</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #93C5FD;">
+                <div class="media-icon pull-left"><i class="fas fa-shopping-cart"></i> </div>
+                <div class="media-info">
+                    <h5>Toplam Alışveriş</h5>
+                    <h3>27</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #6EE7B7;">
+                <div class="media-icon pull-left"><i class="fas fa-tag"></i> </div>
+                <div class="media-info">
+                    <h5>Günün İndirimli Ürünü</h5>
+                    <h3>Trençkot</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #FBCFE8;">
+                <div class="media-icon pull-left"><i class="fas fa-store"></i> </div>
+                <div class="media-info">
+                    <h5>Son Eklenen Marka</h5>
+                    <h3>Mavi Jeans</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #D8B4F0;">
+                <div class="media-icon pull-left"><i class="fas fa-images"></i> </div>
+                <div class="media-info">
+                    <h5>Toplam Görsel Sayısı</h5>
+                    <h3>246</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #93C5FD;">
+                <div class="media-icon pull-left"><i class="fas fa-cash-register"></i> </div>
+                <div class="media-info">
+                    <h5>Kasadaki Toplam Tutar</h5>
+                    <h3>48.987,35 ₺</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #6EE7B7;">
+                <div class="media-icon pull-left"><i class="fas fa-chart-line"></i> </div>
+                <div class="media-info">
+                    <h5>Bugünkü Satış</h5>
+                    <h3>14268.48 ₺</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <div class="media-box" style="background-color: #FBCFE8;">
+                <div class="media-icon pull-left"><i class="fas fa-receipt"></i> </div>
+                <div class="media-info">
+                    <h5>Son Satış Tutarı</h5>
+                    <h3>591.00 ₺</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
