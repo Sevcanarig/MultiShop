@@ -4,3 +4,4 @@ obj/
 *.user
 *.suo
 *.sln.docstates
+/Frontends/MultiShop.WebUI/wwwroot/Img/1.png
