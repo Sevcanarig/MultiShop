@@ -70,7 +70,7 @@
 | 💰 Discount | MSSQL (Docker) | İndirimler; Docker SQL kullanımı ile izolasyon |
 | 🖼️ Images | Google Cloud Storage | Ürün ve diğer görsellerin depolanması |
 | ✉️ Message | PostgreSQL | Mesajlaşma servisi |
-| 📝 Order | PostgreSQL | Sipariş yönetimi; Onion Architecture, CQRS ve Mediator kullanımı |
+| 📝 Order | MSSQL | Sipariş yönetimi; Onion Architecture, CQRS ve Mediator kullanımı |
 | 🔑 IdentityServer4 | MSSQL (Docker) | Kimlik doğrulama; farklı DB ile izolasyon sağlandı |
 | 💳 Payment | - | Ödeme işlemleri |
 | ⚡ SignalR | - | Anlık bildirim ve mesajlaşma |
